@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projets</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Logo/Favicon du site -->
+  <link rel="icon" type="image/png" href="logo.png" sizes="32x32">
+</head>
+<body>
+  <header class="header" role="banner">
+    <div class="header-content">
+      <div class="header-title-nav">
+        <div class="micro-logo-title-group">
+          <span class="micro-logo" aria-hidden="true">
+            <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle class="micro-logo-bg" cx="19" cy="19" r="18" fill="#e0f7e9" stroke="#1b5e20" stroke-width="2"/>
+              <path class="micro-logo-leaf" d="M19 28 Q25 22 19 10 Q13 22 19 28 Z" fill="#43a047">
+                <animate attributeName="d" values="M19 28 Q25 22 19 10 Q13 22 19 28 Z;M19 28 Q23 20 19 10 Q15 20 19 28 Z;M19 28 Q25 22 19 10 Q13 22 19 28 Z" dur="2.2s" repeatCount="indefinite"/>
+              </path>
+              <circle class="micro-logo-dot" cx="19" cy="19" r="3" fill="#1b5e20">
+                <animate attributeName="r" values="3;5;3" dur="1.6s" repeatCount="indefinite"/>
+              </circle>
+            </svg>
+          </span>
+          <h1 class="site-title animated-title">Projets</h1>
+        </div>
+        <nav aria-label="Navigation principale" role="navigation">
+          <button id="menuToggle" aria-label="Ouvrir ou fermer le menu de navigation" aria-controls="navList" aria-expanded="false">☰</button>
+          <ul id="navList" class="hidden nav-list" tabindex="0">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="projets.html" aria-current="page">Projets</a></li>
+            <li><a href="competences.html">Compétences</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="wireframes.html" class="nav-wireframes-link">Wireframes</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="theme-selector-container">
+        <label for="themeSelectorProjets" class="visually-hidden">Choisir le thème</label>
+        <select id="themeSelectorProjets" aria-label="Choisir le thème" tabindex="0">
+          <option value="light">Clair</option>
+          <option value="dark">Sombre</option>
+          <option value="green">Vert</option>
+          <option value="blue">Bleu</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent" tabindex="-1">
+    <section class="projects-section">
+      <h2 class="projects-title">Mes Projets</h2>
+
+      <div class="projects-filter">
+        <label for="filterProjects">Filtrer par :</label>
+        <select id="filterProjects">
+          <option value="all">Tous</option>
+          <option value="ux">UX Design</option>
+          <option value="dev">Développement</option>
+        </select>
+      </div>
+
+      <div class="projects-list">
+        <article class="project-card ux" data-type="ux">
+          <h3>Refonte e-commerce UX</h3>
+          <p>Amélioration mobile-first d’un site de vente.<br><span class="project-tools">Outils : Figma, JS, HTML/CSS</span></p>
+        </article>
+
+        <article class="project-card ux" data-type="ux">
+          <h3>Application Santé – Parcours Utilisateur</h3>
+          <p>Conception du parcours utilisateur pour une app de suivi santé.<br><span class="project-tools">Outils : Figma, User Flows, Prototypage</span></p>
+        </article>
+
+        <article class="project-card ux" data-type="ux">
+          <h3>Audit UX d’un site institutionnel</h3>
+          <p>Analyse heuristique et recommandations d’amélioration.<br><span class="project-tools">Outils : Miro, Figma, Rapport UX</span></p>
+        </article>
+
+        <article class="project-card ux" data-type="ux">
+          <h3>Wireframes pour plateforme éducative</h3>
+          <p>Création de wireframes basse et haute fidélité pour une plateforme d’apprentissage.<br><span class="project-tools">Outils : Figma, Sketch</span></p>
+        </article>
+
+        <article class="project-card dev" data-type="dev">
+          <h3>Dashboard React</h3>
+          <p>Création d’un tableau de bord interactif en React.js<br><span class="project-tools">Fonctionnalités dynamiques + design responsive</span></p>
+        </article>
+
+        <article class="project-card dev" data-type="dev">
+          <h3>Site vitrine pour une startup</h3>
+          <p>Développement d’un site vitrine moderne et performant.<br><span class="project-tools">Outils : HTML, CSS, JavaScript, SEO</span></p>
+        </article>
+
+        <article class="project-card dev" data-type="dev">
+          <h3>API RESTful Node.js</h3>
+          <p>Conception et implémentation d’une API sécurisée pour une application mobile.<br><span class="project-tools">Outils : Node.js, Express, MongoDB</span></p>
+        </article>
+
+        <article class="project-card dev" data-type="dev">
+          <h3>Portfolio interactif</h3>
+          <p>Développement d’un portfolio interactif avec animations et dark mode.<br><span class="project-tools">Outils : HTML, CSS, JavaScript</span></p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <p>&copy; 2025 – Tous droits réservés</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Logo/Favicon du site -->
+  <link rel="icon" type="image/png" href="logo.png" sizes="32x32">
+</head>
+<body>
+  <header class="header" role="banner">
+    <div class="header-content">
+      <div class="header-title-nav">
+        <div class="micro-logo-title-group">
+          <span class="micro-logo" aria-hidden="true">
+            <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle class="micro-logo-bg" cx="19" cy="19" r="18" fill="#e0f7e9" stroke="#1b5e20" stroke-width="2"/>
+              <path class="micro-logo-leaf" d="M19 28 Q25 22 19 10 Q13 22 19 28 Z" fill="#43a047">
+                <animate attributeName="d" values="M19 28 Q25 22 19 10 Q13 22 19 28 Z;M19 28 Q23 20 19 10 Q15 20 19 28 Z;M19 28 Q25 22 19 10 Q13 22 19 28 Z" dur="2.2s" repeatCount="indefinite"/>
+              </path>
+              <circle class="micro-logo-dot" cx="19" cy="19" r="3" fill="#1b5e20">
+                <animate attributeName="r" values="3;5;3" dur="1.6s" repeatCount="indefinite"/>
+              </circle>
+            </svg>
+          </span>
+          <h1 class="site-title animated-title">À propos</h1>
+        </div>
+        <nav aria-label="Navigation principale" role="navigation">
+          <button id="menuToggle" aria-label="Ouvrir ou fermer le menu de navigation" aria-controls="navList" aria-expanded="false">☰</button>
+          <ul id="navList" class="hidden nav-list" tabindex="0">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="a-propos.html" aria-current="page">À propos</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="competences.html">Compétences</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="wireframes.html" class="nav-wireframes-link">Wireframes</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="theme-selector-container">
+        <label for="themeSelectorApropos" class="visually-hidden">Choisir le thème</label>
+        <select id="themeSelectorApropos" aria-label="Choisir le thème" tabindex="0">
+          <option value="light">Clair</option>
+          <option value="dark">Sombre</option>
+          <option value="green">Vert</option>
+          <option value="blue">Bleu</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent" tabindex="-1">
+    <section class="about-section">
+      <h2 class="about-title">À propos</h2>
+      <p class="about-intro">Je suis <span class="about-name">[MAHAMOUD KAOU OUEDRAOGO]</span>, UX Designer & Développeur Web passionné par la conception intuitive et les interfaces accessibles. Mon parcours hybride me permet de créer des expériences complètes, de la recherche utilisateur au code final.</p>
+      <p class="about-intro">Je crois en une approche centrée sur les besoins réels, en utilisant le design thinking, les tests, et l'amélioration continue.</p>
+    </section>
+
+    <section class="certifications-section">
+      <h2 class="certifications-title">Certifications & Badges</h2>
+      <div class="certifications">
+        <!-- Certificat Google UX Design -->
+        <div class="badge">
+          <img src="Kaou certificats pro Coursera YTI77R894YK2_pages-to-jpg-0001.jpg" alt="Certificat Google UX Design sur Coursera" class="certif-img" />
+          <p><strong>UX Designer certifié</strong><br>
+          Programme professionnel Google sur Coursera<br>
+          7 modules + 3 projets réels de design UX</p>
+        </div>
+
+        <!-- Badge IA au Quotidien – ODC Clubs -->
+        <div class="badge">
+          <img src="Intelligence Artificielle Au Quotidien - ODC Clubs completion badge.png" alt="Badge IA au Quotidien ODC Clubs" class="certif-img" />
+          <p><strong>Badge IA au Quotidien</strong><br>
+          Délivré par ODC Clubs<br>
+          Compétences pratiques en IA pour les usages quotidiens</p>
+        </div>
+
+        <!-- Attestation Développement Web – DCLIC -->
+        <div class="badge">
+          <img src="Badge_Développement_Web_(Niveau_intermédiaire_-_Mai_2025).png" alt="Badge Développement Web DCLIC" class="certif-img" />
+          <p><strong>Attestation Développement Web</strong><br>
+          Programme D-CLIC – Culture numérique<br>
+          HTML, CSS, JavaScript, projets interactifs</p>
+        </div>
+      </div>
+      <!-- Overlay pour affichage grand plan -->
+      <div id="certifOverlay" class="certif-overlay" style="display:none;">
+        <span id="closeOverlay" class="close-overlay">&times;</span>
+        <img id="overlayImg" src="" alt="Certificat en grand" />
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <p>&copy; 2025 – Tous droits réservés</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

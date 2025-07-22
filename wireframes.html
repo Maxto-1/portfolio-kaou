@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wireframes – Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="logo.png" sizes="32x32">
+</head>
+<body>
+  <header class="header modern-header" role="banner">
+    <div class="header-content modern-header">
+      <div class="logo-profile-group">
+        <div class="logo-container">
+          <img src="logo.png" alt="Logo du site" class="site-logo small-logo" loading="lazy" />
+        </div>
+        <!-- Overlay pour affichage grand plan de la photo de profil -->
+        <div id="profileOverlayWireframes" class="certif-overlay" style="display:none;">
+          <span id="closeProfileOverlayWireframes" class="close-overlay">&times;</span>
+          <img id="overlayProfileImgWireframes" src="IMG-20221216-WA0011.jpg" alt="Portrait de Mahamoud Kaou Ouedraogo en grand plan" />
+        </div>
+      </div>
+      <div class="header-title-nav modern-title-nav">
+        <div class="micro-logo-title-group">
+          <span class="micro-logo" aria-hidden="true">
+            <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle class="micro-logo-bg" cx="19" cy="19" r="18" fill="#e0f7e9" stroke="#1b5e20" stroke-width="2"/>
+              <path class="micro-logo-leaf" d="M19 28 Q25 22 19 10 Q13 22 19 28 Z" fill="#43a047">
+                <animate attributeName="d" values="M19 28 Q25 22 19 10 Q13 22 19 28 Z;M19 28 Q23 20 19 10 Q15 20 19 28 Z;M19 28 Q25 22 19 10 Q13 22 19 28 Z" dur="2.2s" repeatCount="indefinite"/>
+              </path>
+              <circle class="micro-logo-dot" cx="19" cy="19" r="3" fill="#1b5e20">
+                <animate attributeName="r" values="3;5;3" dur="1.6s" repeatCount="indefinite"/>
+              </circle>
+            </svg>
+          </span>
+          <h1 class="site-title animated-title">Wireframes du Portfolio</h1>
+        </div>
+        <nav aria-label="Navigation principale" role="navigation">
+          <ul id="navListWireframes" class="hidden nav-list" tabindex="0">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="competences.html">Compétences</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="wireframes.html" aria-current="page">Wireframes</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="theme-selector-container modern-theme-selector">
+        <label for="themeSelectorWireframes" class="visually-hidden">Choisir le thème</label>
+        <select id="themeSelectorWireframes" aria-label="Choisir le thème" tabindex="0">
+          <option value="light">Clair</option>
+          <option value="dark">Sombre</option>
+          <option value="green">Vert</option>
+          <option value="blue">Bleu</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="wireframe-main modern-welcome" id="mainContent" tabindex="-1">
+    <nav class="wireframe-summary modern-summary" aria-label="Sommaire">
+      <button id="menuToggleWireframesSummary" aria-label="Ouvrir ou fermer le sommaire" aria-controls="summaryList" aria-expanded="false" class="summary-toggle" style="display:none;">
+        <span aria-hidden="true">☰</span> <span class="summary-label">Sommaire</span>
+      </button>
+      <ul id="summaryList" class="modern-summary-list">
+        <li><a href="#accueil"><span class="summary-icon" aria-hidden="true">🏠</span> Accueil</a></li>
+        <li><a href="#projets"><span class="summary-icon" aria-hidden="true">💼</span> Projets</a></li>
+        <li><a href="#contact"><span class="summary-icon" aria-hidden="true">✉️</span> Contact</a></li>
+        <li><a href="#competences"><span class="summary-icon" aria-hidden="true">🛠️</span> Compétences</a></li>
+        <li><a href="#a-propos"><span class="summary-icon" aria-hidden="true">👤</span> À propos</a></li>
+        <li><a href="#extras"><span class="summary-icon" aria-hidden="true">✨</span> Extras</a></li>
+      </ul>
+    </nav>
+    <section class="wireframe-section" id="accueil">
+      <h2 class="wireframe-title">Accueil (Home)</h2>
+      <img src="wireframe-home.png" alt="Wireframe de la page d'accueil" class="wireframe-img" />
+      <h3>Extrait réel&nbsp;:</h3>
+      <blockquote class="wireframe-blockquote">
+        <strong>Bienvenue</strong><br>
+        Je suis un professionnel du design UX et du développement web. Ce portfolio présente mes projets, compétences et certifications, notamment le programme Google UX Design, le badge IA ODC Clubs, et l’attestation DCLIC. <span class="explore-highlight">Explorez pour découvrir mon univers créatif.</span>
+      </blockquote>
+      <ul>
+        <li>Header moderne : logo animé, navigation accessible, sélecteur de thème synchronisé sur toutes les pages, image de profil cliquable</li>
+        <li>Section bienvenue avec effet dactylographié dynamique</li>
+        <li>Overlay pour agrandir la photo de profil</li>
+        <li>Footer moderne, responsive et harmonisé</li>
+        <li>Thème choisi (clair, sombre, vert, bleu, automatique) conservé sur toutes les pages</li>
+      </ul>
+    </section>
+    <section class="wireframe-section" id="projets">
+      <h2 class="wireframe-title">Projets</h2>
+      <img src="wireframe-projets.png" alt="Wireframe de la page projets" class="wireframe-img" />
+      <h3>Extrait réel&nbsp;:</h3>
+      <blockquote class="wireframe-blockquote">
+        <strong>Refonte e-commerce UX</strong><br>
+        Amélioration mobile-first d’un site de vente.<br>
+        <span class="project-tools">Outils : Figma, JS, HTML/CSS</span>
+      </blockquote>
+      <ul>
+        <li>Filtrage dynamique des projets (UX, Dev, Tous) avec JavaScript</li>
+        <li>Cartes projet modernes : titre, description, outils, accessibilité</li>
+        <li>Overlay pour agrandir les certificats de projets</li>
+        <li>Navigation clavier, ARIA et contraste optimisé</li>
+        <li>Transitions animées entre les pages (slide/fade)</li>
+        <li>Thème et affichage cohérents sur toutes les pages</li>
+      </ul>
+    </section>
+
+    <section class="wireframe-section" id="certifications">
+      <h2 class="wireframe-title">Certifications &amp; Galerie</h2>
+      <img src="wireframe-certif-carousel.png" alt="Wireframe du carrousel/galerie de certifications" class="wireframe-img" />
+      <h3>Extrait réel&nbsp;:</h3>
+      <blockquote class="wireframe-blockquote">
+        <strong>Certifications &amp; Badges</strong><br>
+        <span>Carrousel animé affichant plusieurs badges et certificats côte à côte, défilement horizontal, navigation par flèches et swipe, agrandissement au clic.</span>
+      </blockquote>
+      <ul>
+        <li>Carrousel/galerie responsive : toutes les images visibles côte à côte</li>
+        <li>Défilement horizontal par flèches ou swipe (mobile)</li>
+        <li>Overlay pour agrandir chaque badge/certificat</li>
+        <li>Accessibilité : navigation clavier, ARIA, focus visible</li>
+        <li>Design harmonisé avec le thème du site</li>
+        <li>Synchronisation du thème du carrousel avec le reste du site</li>
+      </ul>
+    </section>
+    <section class="wireframe-section" id="competences">
+      <h2 class="wireframe-title">Compétences</h2>
+      <img src="wireframe-competences.png" alt="Wireframe de la page compétences" class="wireframe-img" />
+      <h3>Extrait réel&nbsp;:</h3>
+      <blockquote class="wireframe-blockquote">
+        <ul style="text-align:left;max-width:420px;margin:0 auto;">
+          <li>UX Research, Wireframing, Prototypage (Figma, Adobe XD)</li>
+          <li>Tests utilisateurs, Personas, Parcours utilisateur</li>
+          <li>Design d’interfaces, Design System, Atomic Design</li>
+          <li>Développement : HTML5, CSS3, JavaScript, React, Node.js</li>
+          <li>TypeScript, SASS/SCSS, Bootstrap, Tailwind CSS</li>
+          <li>Responsive Design, Accessibilité (WCAG), SEO</li>
+          <li>Performance web, Optimisation, Lighthouse</li>
+          <li>Utilisation d’outils : GitHub, VS Code, Miro, Notion, Trello</li>
+        </ul>
+      </blockquote>
+      <ul>
+        <li>Compétences UX, UI, développement web, outils modernes</li>
+        <li>Design accessible, responsive, et optimisé SEO</li>
+        <li>Utilisation d’outils collaboratifs et de gestion de projet</li>
+      </ul>
+    </section>
+    <section class="wireframe-section" id="a-propos">
+      <h2 class="wireframe-title">À propos</h2>
+      <img src="wireframe-apropos.png" alt="Wireframe de la page à propos" class="wireframe-img" />
+      <h3>Extrait réel&nbsp;:</h3>
+      <blockquote class="wireframe-blockquote">
+        Je suis <strong>Mahamoud Kaou Ouedraogo</strong>, UX Designer & Développeur Web passionné par la conception intuitive et les interfaces accessibles. Mon parcours hybride me permet de créer des expériences complètes, de la recherche utilisateur au code final.<br>
+        J’adopte une approche centrée utilisateur, combinant design thinking, tests, accessibilité et amélioration continue.
+      </blockquote>
+      <ul>
+        <li>Présentation du parcours, valeurs et philosophie UX</li>
+        <li>Certifications, badges et expériences clés</li>
+      </ul>
+    </section>
+    <section class="wireframe-section" id="contact">
+      <h2 class="wireframe-title">Contact</h2>
+      <img src="wireframe-contact.png" alt="Wireframe de la page contact" class="wireframe-img" />
+      <h3>Extrait réel&nbsp;:</h3>
+      <blockquote class="wireframe-blockquote">
+        <strong>Envie de collaborer&nbsp;?</strong> <span class="contact-highlight">Parlons design, développement ou accessibilité&nbsp;!</span>
+      </blockquote>
+      <ul>
+        <li>Formulaire accessible : labels, validation, message de confirmation</li>
+        <li>Footer moderne, harmonisé et responsive</li>
+        <li>Contact facilité (mail, LinkedIn, etc.)</li>
+      </ul>
+    </section>
+    <section class="wireframe-section" id="extras">
+      <h2 class="wireframe-title">Extras (Fonctionnalités avancées)</h2>
+      <ul>
+        <li>Sélecteur de thème (clair, sombre, vert, bleu, automatique) synchronisé sur toutes les pages</li>
+        <li>Micro-logo animé (SVG) dans le header</li>
+        <li>Animation artistique sur le titre principal</li>
+        <li>Overlay dynamique pour agrandir la photo de profil et les certificats</li>
+        <li>Carrousel/galerie de certifications multi-images, défilement horizontal, navigation flèches/swipe</li>
+        <li>Transitions animées entre les pages (slide/fade)</li>
+        <li>Filtrage dynamique des projets (JS)</li>
+        <li>Accessibilité renforcée (ARIA, navigation clavier, contraste, focus)</li>
+        <li>Menu sommaire moderne, interactif et responsive</li>
+        <li>Logo agrandi et modernisé, positionné pour une lisibilité optimale</li>
+        <li>Synchronisation instantanée du thème entre toutes les pages ouvertes</li>
+      </ul>
+    </section>
+  </main>
+  <footer class="footer" role="contentinfo">
+    <p>&copy; 2025 – Wireframes originaux réalisés pour le portfolio</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

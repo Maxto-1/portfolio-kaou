@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil – Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Logo/Favicon du site -->
+  <link rel="icon" type="image/png" href="logo.png" sizes="32x32">
+</head>
+<body>
+  <header class="header" role="banner">
+    <div class="header-content">
+      <div class="profile-image-container">
+        <img src="IMG-20221216-WA0011.jpg" alt="Portrait de Mahamoud Kaou Ouedraogo, UX Designer et Développeur Web" class="profile-image" id="profileImage" loading="lazy" tabindex="0" style="cursor: zoom-in;" />
+      </div>
+      <!-- Overlay pour affichage grand plan de la photo de profil -->
+      <div id="profileOverlay" class="certif-overlay" style="display:none;">
+        <span id="closeProfileOverlay" class="close-overlay">&times;</span>
+        <img id="overlayProfileImg" src="IMG-20221216-WA0011.jpg" alt="Portrait de Mahamoud Kaou Ouedraogo en grand plan" />
+      </div>
+      <div class="header-title-nav">
+        <div class="micro-logo-title-group">
+          <span class="micro-logo" aria-hidden="true">
+            <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle class="micro-logo-bg" cx="19" cy="19" r="18" fill="#e0f7e9" stroke="#1b5e20" stroke-width="2"/>
+              <path class="micro-logo-leaf" d="M19 28 Q25 22 19 10 Q13 22 19 28 Z" fill="#43a047">
+                <animate attributeName="d" values="M19 28 Q25 22 19 10 Q13 22 19 28 Z;M19 28 Q23 20 19 10 Q15 20 19 28 Z;M19 28 Q25 22 19 10 Q13 22 19 28 Z" dur="2.2s" repeatCount="indefinite"/>
+              </path>
+              <circle class="micro-logo-dot" cx="19" cy="19" r="3" fill="#1b5e20">
+                <animate attributeName="r" values="3;5;3" dur="1.6s" repeatCount="indefinite"/>
+              </circle>
+            </svg>
+          </span>
+          <h1 class="site-title animated-title">Portfolio – UX Designer & Développeur Web</h1>
+        </div>
+        <nav aria-label="Navigation principale" role="navigation">
+          <button id="menuToggle" aria-label="Ouvrir ou fermer le menu de navigation" aria-controls="navList" aria-expanded="false">☰</button>
+          <ul id="navList" class="hidden nav-list" tabindex="0">
+            <li><a href="index.html" aria-current="page">Accueil</a></li>
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="competences.html">Compétences</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="wireframes.html" class="nav-wireframes-link">Wireframes</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="theme-selector-container">
+        <label for="themeSelectorIndex" class="visually-hidden">Choisir le thème</label>
+        <select id="themeSelectorIndex" aria-label="Choisir le thème" tabindex="0">
+          <option value="auto">Automatique</option>
+          <option value="light">Clair</option>
+          <option value="dark">Sombre</option>
+          <option value="green">Vert</option>
+          <option value="blue">Bleu</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent" tabindex="-1">
+    <section class="welcome-section modern-welcome" id="welcomeSection" aria-labelledby="welcomeTitle">
+      <div class="welcome-card">
+        <h2 class="welcome-title modern-welcome-title" id="welcomeTitle">Bienvenue</h2>
+        <p id="welcomeText" class="modern-welcome-text">Je suis un professionnel du design UX et du développement web. Ce portfolio présente mes projets, compétences et certifications, notamment le programme Google UX Design, le badge IA ODC Clubs, et l’attestation DCLIC. <span class="explore-highlight">Explorez pour découvrir mon univers créatif.</span></p>
+      </div>
+    </section>
+    <section class="certif-carousel-section" aria-label="Certifications et badges">
+      <h2 class="carousel-title">Certifications &amp; Badges</h2>
+      <div class="certif-carousel" id="certifCarousel">
+        <button class="carousel-nav prev" id="carouselPrev" aria-label="Certification précédente">&#8592;</button>
+        <div class="carousel-track" id="carouselTrack">
+          <img src="Badge_Développement_Web_(Niveau_intermédiaire_-_Mai_2025).png" alt="Badge Développement Web intermédiaire" class="carousel-certif" loading="lazy" />
+          <img src="Intelligence Artificielle Au Quotidien - ODC Clubs completion badge.png" alt="Badge IA ODC Clubs" class="carousel-certif" loading="lazy" />
+          <img src="Kaou certificats pro Coursera YTI77R894YK2_pages-to-jpg-0001.jpg" alt="Certificat Google UX Design" class="carousel-certif" loading="lazy" />
+        </div>
+        <button class="carousel-nav next" id="carouselNext" aria-label="Certification suivante">&#8594;</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <p>&copy; 2025 – Tous droits réservés</p>
+    <!-- Overlay pour affichage grand plan des certificats (réutilisé) -->
+    <div id="certifOverlay" class="certif-overlay" style="display:none;">
+      <span id="closeOverlay" class="close-overlay">&times;</span>
+      <img id="overlayImg" src="" alt="Certificat ou badge en grand plan" />
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
