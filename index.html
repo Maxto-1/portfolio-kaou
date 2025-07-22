@@ -5,19 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Accueil – Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Logo/Favicon du site -->
   <link rel="icon" type="image/png" href="logo.png" sizes="32x32">
 </head>
 <body>
-  <header class="header" role="banner">
+  <header class="header">
     <div class="header-content">
       <div class="profile-image-container">
-        <img src="IMG-20221216-WA0011.jpg" alt="Portrait de Mahamoud Kaou Ouedraogo, UX Designer et Développeur Web" class="profile-image" id="profileImage" loading="lazy" tabindex="0" style="cursor: zoom-in;" />
+        <img src="IMG-20221216-WA0011.jpg" alt="Portrait de Mahamoud Kaou Ouedraogo, UX Designer et Développeur Web" class="profile-image" id="profileImage" loading="lazy" tabindex="0" style="cursor: zoom-in;">
       </div>
-      <!-- Overlay pour affichage grand plan de la photo de profil -->
       <div id="profileOverlay" class="certif-overlay" style="display:none;">
         <span id="closeProfileOverlay" class="close-overlay">&times;</span>
-        <img id="overlayProfileImg" src="IMG-20221216-WA0011.jpg" alt="Portrait de Mahamoud Kaou Ouedraogo en grand plan" />
+        <img id="overlayProfileImg" src="IMG-20221216-WA0011.jpg" alt="Portrait de Mahamoud Kaou Ouedraogo en grand plan">
       </div>
       <div class="header-title-nav">
         <div class="micro-logo-title-group">
@@ -34,7 +32,7 @@
           </span>
           <h1 class="site-title animated-title">Portfolio – UX Designer & Développeur Web</h1>
         </div>
-        <nav aria-label="Navigation principale" role="navigation">
+        <nav aria-label="Navigation principale">
           <button id="menuToggle" aria-label="Ouvrir ou fermer le menu de navigation" aria-controls="navList" aria-expanded="false">☰</button>
           <ul id="navList" class="hidden nav-list" tabindex="0">
             <li><a href="index.html" aria-current="page">Accueil</a></li>
@@ -66,30 +64,27 @@
         <p id="welcomeText" class="modern-welcome-text">Je suis un professionnel du design UX et du développement web. Ce portfolio présente mes projets, compétences et certifications, notamment le programme Google UX Design, le badge IA ODC Clubs, et l’attestation DCLIC. <span class="explore-highlight">Explorez pour découvrir mon univers créatif.</span></p>
       </div>
     </section>
+
     <section class="certif-carousel-section" aria-label="Certifications et badges">
-      <h2 class="carousel-title">Certifications &amp; Badges</h2>
+      <h2 class="carousel-title">Certifications & Badges</h2>
       <div class="certif-carousel" id="certifCarousel">
         <button class="carousel-nav prev" id="carouselPrev" aria-label="Certification précédente">&#8592;</button>
         <div class="carousel-track" id="carouselTrack">
-          <img src="Badge_Développement_Web_(Niveau_intermédiaire_-_Mai_2025).png" alt="Badge Développement Web intermédiaire" class="carousel-certif" loading="lazy" />
-          <img src="Intelligence Artificielle Au Quotidien - ODC Clubs completion badge.png" alt="Badge IA ODC Clubs" class="carousel-certif" loading="lazy" />
-          <img src="Kaou certificats pro Coursera YTI77R894YK2_pages-to-jpg-0001.jpg" alt="Certificat Google UX Design" class="carousel-certif" loading="lazy" />
+          <img src="Badge-Web-Intermediaire-Mai2025.png" alt="Badge Développement Web intermédiaire" class="carousel-certif" loading="lazy">
+          <img src="Badge-IA-ODC-Clubs.png" alt="Badge IA ODC Clubs" class="carousel-certif" loading="lazy">
+          <img src="Certificat-Google-UX-Design.jpg" alt="Certificat Google UX Design" class="carousel-certif" loading="lazy">
         </div>
         <button class="carousel-nav next" id="carouselNext" aria-label="Certification suivante">&#8594;</button>
       </div>
     </section>
   </main>
 
-  <footer class="footer" role="contentinfo">
+  <footer class="footer">
     <p>&copy; 2025 – Tous droits réservés</p>
-    <!-- Overlay pour affichage grand plan des certificats (réutilisé) -->
     <div id="certifOverlay" class="certif-overlay" style="display:none;">
       <span id="closeOverlay" class="close-overlay">&times;</span>
-      <img id="overlayImg" src="" alt="Certificat ou badge en grand plan" />
+      <img id="overlayImg" src="fallback-certif.png" alt="Certificat ou badge en grand plan">
     </div>
   </footer>
 
-  <script src="script.js"></script>
-</body>
-</html>
-
+  <script src="script.js"></script
