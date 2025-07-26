@@ -20,6 +20,18 @@ document.addEventListener('DOMContentLoaded', function () {
       current = (current + 1) % slides.length;
       scrollToCurrent();
     });
+    // Responsive: update on resize
+    window.addEventListener('resize', () => scrollToCurrent('auto'));
+    // Adapt overflow for mobile
+    function updateTrackOverflow() {
+      if (window.innerWidth < 700) {
+        track.style.overflowX = 'auto';
+      } else {
+        track.style.overflowX = 'hidden';
+      }
+    }
+    updateTrackOverflow();
+    window.addEventListener('resize', updateTrackOverflow);
     // Swipe support (mobile)
     let startX = null;
     track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; });
@@ -46,6 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
+
 // --- Fermeture overlay certif carrousel (index) ---
 document.addEventListener('DOMContentLoaded', function () {
   const overlay = document.getElementById('certifOverlay');
@@ -64,8 +77,11 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.style.overflow = '';
       }
     });
+    // Accessibilité : tabIndex pour l'image agrandie
+    overlayImg.tabIndex = 0;
   }
 });
+
 // --- Transition slide/fade entre les pages ---
 document.addEventListener('DOMContentLoaded', function () {
   const mainContent = document.getElementById('mainContent');
@@ -89,6 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
+
 // --- Menu sommaire mobile moderne pour wireframes.html ---
 document.addEventListener('DOMContentLoaded', function () {
   const menuToggleSummary = document.getElementById('menuToggleWireframesSummary');
@@ -134,6 +151,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
+
 // --- Sélecteur de thème multiple (compatible multi-pages) ---
 document.addEventListener("DOMContentLoaded", () => {
   // Cherche un select dont l'id commence par 'themeSelector' (id unique par page)
@@ -189,6 +207,7 @@ document.addEventListener("DOMContentLoaded", () => {
     applyTheme(theme);
   });
 });
+
 // --- Affichage grand plan de la photo de profil (index) ---
 document.addEventListener("DOMContentLoaded", () => {
   const profileImg = document.getElementById('profileImage');
@@ -219,26 +238,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-// (Suppression du code de gestion darkMode pour éviter les conflits avec la logique du sélecteur de thème)
-// --- Filtrage dynamique des projets ---
+
+// --- Filtrage dynamique des projets (fusionné et unifié) ---
 document.addEventListener("DOMContentLoaded", () => {
   const filter = document.getElementById("filterProjects");
   if (filter) {
     filter.addEventListener("change", () => {
       const selected = filter.value;
-      document.querySelectorAll(".project-card").forEach(card => {
+      document.querySelectorAll(".project-card, article[data-type]").forEach(card => {
         const type = card.getAttribute("data-type");
-        if (selected === "all" || type === selected) {
-          card.style.display = "block";
-        } else {
-          card.style.display = "none";
-        }
+        card.style.display = (selected === "all" || type === selected) ? "block" : "none";
       });
     });
-    // Affichage initial : tous
+    // Affichage initial : tous
     filter.dispatchEvent(new Event("change"));
   }
 });
+
 // --- Affichage dynamique des certificats en grand plan ---
 document.addEventListener("DOMContentLoaded", () => {
   const certifImgs = document.querySelectorAll('.certif-img');
@@ -274,6 +290,7 @@ document.addEventListener("DOMContentLoaded", () => {
     overlayImg.tabIndex = 0;
   }
 });
+
 // --- Effet dactylographié sur le message de bienvenue ---
 document.addEventListener("DOMContentLoaded", () => {
   const welcomeText = document.getElementById("welcomeText");
@@ -291,54 +308,33 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(typeWriter, 400);
   }
 });
-// 🌒 Mode sombre manuel
-document.addEventListener("DOMContentLoaded", () => {
-  const toggle = document.getElementById("darkToggle");
-  if (toggle) {
-    toggle.addEventListener("click", () => {
-      document.documentElement.classList.toggle("manual-dark");
-    });
-  }
 
+// --- Menu mobile toggle et dark mode manuel unifiés --- 
+document.addEventListener("DOMContentLoaded", () => {
   // 📱 Menu mobile toggle
-    const menuToggle = document.getElementById("menuToggle");
+  const menuToggle = document.getElementById("menuToggle");
   const navList = document.getElementById("navList");
-  if (menuButton && navList) {
-    menuButton.addEventListener("click", () => {
+  if (menuToggle && navList) {
+    menuToggle.addEventListener("click", () => {
       navList.classList.toggle("hidden");
     });
   }
 
-    // --- Dark Mode ---
-    const darkToggle = document.getElementById("darkToggle");
-    const body = document.body;
-    if (darkToggle) {
-      darkToggle.addEventListener("click", () => {
-        body.classList.toggle('dark-mode');
-        // Optionally, save preference
-        if (window.localStorage) {
-          localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
-        }
-      });
-      // Load preference
-      if (window.localStorage && localStorage.getItem('darkMode') === 'true') {
-        body.classList.add('dark-mode');
+  // 🌒 Mode sombre manuel (optionnel, conservé pour fallback)
+  const darkToggle = document.getElementById("darkToggle");
+  const body = document.body;
+  if (darkToggle) {
+    darkToggle.addEventListener("click", () => {
+      body.classList.toggle('dark-mode');
+      // Optionally, save preference
+      if (window.localStorage) {
+        localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
       }
-    }
-
-    // --- Profile Image Placeholder (optional dynamic integration) ---
-    // If you want to allow dynamic image upload, you can add code here.
-
-  // 📚 Filtrage projets
-  const filter = document.getElementById("filterProjects");
-  if (filter) {
-    filter.addEventListener("change", () => {
-      const selected = filter.value;
-      document.querySelectorAll("article").forEach(article => {
-        const type = article.getAttribute("data-type");
-        article.style.display = (selected === "all" || type === selected) ? "block" : "none";
-      });
     });
+    // Load preference
+    if (window.localStorage && localStorage.getItem('darkMode') === 'true') {
+      body.classList.add('dark-mode');
+    }
   }
 
   // 🔎 Surlignage lien actif
